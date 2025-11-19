@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda del Barrio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tienda del Barrio</h1>
+        <nav>
+            <button id="btn-comprar">Comprar</button>
+            <button id="btn-inventario">Inventario</button>
+            <button id="btn-xml">Consultas XML</button>
+        </nav>
+    </header>
+
+    <main id="comprar" class="active">
+        <h2>🛒 Comprar Productos</h2>
+        <div id="productos-disponibles"></div>
+        <div id="carrito">
+            <h3>Carrito</h3>
+            <ul id="lista-carrito"></ul>
+            <p>Total: <span id="total-carrito">0</span></p>
+            <button id="finalizar-compra">Finalizar Compra</button>
+        </div>
+    </main>
+
+    <main id="inventario" class="hidden">
+        <h2>📦 Inventario</h2>
+        <form id="form-producto">
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="number" id="precio" placeholder="Precio" required>
+            <input type="number" id="stock" placeholder="Stock" required>
+            <input type="text" id="categoria" placeholder="Categoría">
+            <label><input type="checkbox" id="activo" checked> Activo</label>
+            <button type="submit">Agregar Producto</button>
+        </form>
+        <div id="lista-inventario"></div>
+    </main>
+
+    <main id="xml" class="hidden">
+        <h2>📊 Consultas XML</h2>
+        <div id="xml-tree"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
